@@ -1,0 +1,25 @@
+{
+  "name": "p3_demetrio_aurelie",
+  "version": "1.0.0",
+  "description": "ohmyfood site de réservation restaurant",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss public/css/style.css",
+    "prod": "sass --watch public/css/prefixed/style.css public/css/style.min.css -w --style compressed",
+    "prefix": "postcss public/css/style.css --use autoprefixer -d public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aurelieweb/AurelieDemetrio_3_07092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aurelieweb/AurelieDemetrio_3_07092021/issues"
+  },
+  "homepage": "https://github.com/aurelieweb/AurelieDemetrio_3_07092021#readme",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "sass": "^1.43.2"
+  }
+}
