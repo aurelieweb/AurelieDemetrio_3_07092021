@@ -1,22 +1,15 @@
 .restaurant-art{
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    height: 300px;
-    border-radius: 25px;
-    margin-bottom: 2rem;
-    box-shadow: 0px 5px 10px rgb(214, 214, 214);
+    @include cards;
     img{
-        width: 100%;
-        height: 80%;
-        border-radius: 25px 25px 0 0;    
+        @include image;
+          
     }
     div{
         display: flex;
         flex-direction: row;      
         justify-content: space-between;
         width: auto;
-        height: 20%;
+        height: auto;
         div{
             display: flex;
             flex-direction: column;
@@ -24,11 +17,10 @@
             height: 100%;
             h2{
                 margin: 0 1rem;
-                font-size: 16px;
+                @extend .typography_text--bold;
             }
             p{
                 margin: 0 1rem;
-                font-size: 12px;    
             }
         }
     
@@ -37,5 +29,39 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 1rem;
     }
+}
+
+.fonctionnement-choix{
+    @include cards;
+    justify-content: space-between;  
+    background-color: $lightgrey;
+    @extend .typography_text--bold;
+    font-size: 1rem;
+        a{
+            justify-content: left;
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 5rem;
+            span{
+                border-radius: 50%;
+                background-color: #9356DC;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 2rem;
+                width: 2rem;
+                position: relative;
+                left: -20px;
+                color: #fff;
+            }
+            p{
+                margin-left: 20px;
+            }
+            i{
+                color: $darkgrey;
+            }
+        } 
 }

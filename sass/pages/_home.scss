@@ -1,0 +1,29 @@
+.restaurant{
+   @include background-section; 
+}
+
+.recherche{
+   padding-top: 0;
+   @include background-section;
+   &-loc{
+      display: flex;
+      justify-content: center;
+      background-color: $grey;
+      height: 3rem;
+      i {
+         padding-right: 20px;
+         display: flex;
+         align-items: center;
+      } 
+      input {
+         border: none;
+         background-color: $grey;
+      }  
+   }
+   &-resultat{
+      /*display: flex;
+      flex-direction: column;
+      align-content: center;*/
+      width: 100%;
+   }
+}

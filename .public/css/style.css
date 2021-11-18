@@ -1,11 +1,26 @@
 body {
   margin: 200px;
   max-width: 480px;
-  background-color: #000;
 }
 
 footer {
-  background-color: black;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  color: white;
+}
+footer img {
+  color: white;
+}
+footer .footer__div {
+  display: flex;
+  flex-direction: row;
+  min-height: 2em;
+}
+footer .footer__div .fas {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

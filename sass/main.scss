@@ -5,13 +5,14 @@
 @import './utils/_fonctions.scss';
 @import './utils/_placeholders.scss';
 
-//@import './base/';//
+@import './base/_bases.scss';
+@import './base/_typographie.scss';
 
 @import './layout/_container.scss';
 @import './layout/_footer.scss';
 @import './layout/_header.scss';
 
-//@import './pages/scss';//
+@import './pages/_home.scss';
 
 @import './components/_cards.scss';
 

@@ -1,5 +1,6 @@
 body{
-    margin: 200px;
     max-width: 480px;
+    width: 375px;
+    @extend .typography_text--thin;
 }
 
