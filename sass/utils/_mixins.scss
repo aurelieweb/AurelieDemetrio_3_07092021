@@ -1,7 +1,8 @@
 @mixin image {
     width: 100%;
     height: 70%;
-    border-radius: 25px 25px 0 0;  
+    border-radius: 25px 25px 0 0;
+    object-fit: cover; 
 }
 
 @mixin background-section {
@@ -10,16 +11,30 @@
 }
 
 @mixin section {
-    padding: 1rem 0;
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
-@mixin cards {
+@mixin cards($height){
     display: flex;
     flex-direction: row;
     width: auto;
-    height: auto;
+    height: $height;
     border-radius: 25px;
-    margin: 2rem;
+    margin: 1rem 0;
     box-shadow: $box-shaddows;
     background-color: white;
+}
+
+@mixin button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, $purple, $pink);
+    height: 3rem;
+    width: 12rem;
+    color: #fff;
+    border-radius: 25px;
+    padding: 1rem;
 }

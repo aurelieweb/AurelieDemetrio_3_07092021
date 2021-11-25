@@ -1,5 +1,5 @@
 .restaurant-art{
-    @include cards;
+    @include cards (15rem);
     img{
         @include image;
           
@@ -34,7 +34,8 @@
 }
 
 .fonctionnement-choix{
-    @include cards;
+    @include cards(auto);
+    margin-left: 1rem;
     justify-content: space-between;  
     background-color: $lightgrey;
     @extend .typography_text--bold;

@@ -1,5 +1,6 @@
 section {
-  padding: 1rem 0;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
 .typography_text--thin, body {
@@ -14,9 +15,9 @@ section {
   font-weight: 800;
 }
 
-.typography_logo {
+.typography_logo, footer h3 {
   font-family: "Shrikhand", Times New Roman, serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -31,9 +32,16 @@ footer {
   flex-direction: column;
   border: 2px solid blue;
   color: white;
+  padding: 1rem;
+  margin: 1rem 0;
 }
-footer img {
-  color: white;
+footer h3 {
+  margin: 0;
+}
+footer p {
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
 }
 footer .footer__div {
   display: flex;
@@ -43,6 +51,19 @@ footer .footer__div {
 footer .footer__div .fas {
   display: flex;
   align-items: center;
+  width: 0.8rem;
+  font-size: 0.8rem;
+}
+footer .footer__div p {
+  margin: 0 0 0 0.8rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header .logo {
+  width: 10rem;
 }
 
 .restaurant {
@@ -50,7 +71,7 @@ footer .footer__div .fas {
 }
 
 .recherche {
-  padding-top: 0;
+  padding: 0;
   background-color: #e5e8e9;
 }
 .recherche-loc {
@@ -69,19 +90,28 @@ footer .footer__div .fas {
   background-color: #b8bdbe;
 }
 .recherche-resultat {
-  /*display: flex;
+  display: flex;
   flex-direction: column;
-  align-content: center;*/
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  /*probleme centrage*/
+}
+.recherche-resultat p {
+  display: flex;
+  justify-content: center;
+  width: auto;
 }
 
 .restaurant-art {
   display: flex;
   flex-direction: row;
   width: auto;
-  height: auto;
+  height: 15rem;
   border-radius: 25px;
-  margin: 2rem;
+  margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
 }
@@ -89,6 +119,7 @@ footer .footer__div .fas {
   width: 100%;
   height: 70%;
   border-radius: 25px 25px 0 0;
+  object-fit: cover;
 }
 .restaurant-art div {
   display: flex;
@@ -122,9 +153,10 @@ footer .footer__div .fas {
   width: auto;
   height: auto;
   border-radius: 25px;
-  margin: 2rem;
+  margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
+  margin-left: 1rem;
   justify-content: space-between;
   background-color: #e5e8e9;
   font-size: 1rem;
@@ -153,6 +185,19 @@ footer .footer__div .fas {
 }
 .fonctionnement-choix a i {
   color: #717374;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  height: 3rem;
+  width: 12rem;
+  color: #fff;
+  border-radius: 25px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

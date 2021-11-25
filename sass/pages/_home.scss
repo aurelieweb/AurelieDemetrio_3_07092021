@@ -3,7 +3,7 @@
 }
 
 .recherche{
-   padding-top: 0;
+   padding: 0;
    @include background-section;
    &-loc{
       display: flex;
@@ -20,10 +20,19 @@
          background-color: $grey;
       }  
    }
-   &-resultat{
-      /*display: flex;
+   &-resultat {
+      display: flex;
       flex-direction: column;
-      align-content: center;*/
+      justify-content: center;
+      align-items: center;
       width: 100%;
+      box-sizing: border-box; 
+      padding: 1rem;
+/*probleme centrage*/
+      p {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      }
    }
 }
