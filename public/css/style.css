@@ -3,7 +3,12 @@ section {
   margin: 1rem 0;
 }
 
-.typography_text--thin, body {
+@media screen and (min-width: 480px) {
+  .layout {
+    background-color: blue;
+  }
+}
+.typography_text--thin, .container {
   font-family: "Roboto", Times New Roman, serif;
   font-size: 1rem;
   font-weight: 300;
@@ -21,7 +26,7 @@ section {
   font-weight: 400;
 }
 
-body {
+.container {
   max-width: 480px;
   width: 375px;
 }
@@ -100,9 +105,7 @@ header .logo {
   /*probleme centrage*/
 }
 .recherche-resultat p {
-  display: flex;
-  justify-content: center;
-  width: auto;
+  text-align: center;
 }
 
 .restaurant-art {
@@ -192,7 +195,7 @@ header .logo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   height: 3rem;
   width: 12rem;
   color: #fff;
