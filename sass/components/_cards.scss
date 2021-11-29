@@ -66,3 +66,7 @@
             }
         } 
 }
+
+.menu__card{
+    @include cards (auto);
+}

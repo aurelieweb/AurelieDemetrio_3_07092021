@@ -1,5 +1,8 @@
 .container{
-    max-width: 480px;
+    max-width: auto;
     width: 375px;
     @extend .typography_text--thin;
+    @include tablet{
+        width: auto;
+    }
 }

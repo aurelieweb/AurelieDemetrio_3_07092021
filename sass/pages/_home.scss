@@ -1,5 +1,13 @@
 .restaurant{
    @include background-section; 
+   &-container{
+      @include tablet{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+   }
 }
 
 .recherche{

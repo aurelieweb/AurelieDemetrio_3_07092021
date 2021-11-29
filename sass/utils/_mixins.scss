@@ -1,3 +1,16 @@
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }  
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }  
+}
+
+
 @mixin image {
     width: 100%;
     height: 70%;
@@ -6,8 +19,7 @@
 }
 
 @mixin background-section {
-    background-color: $lightgrey ;
-    
+    background-color: $lightgrey;  
 }
 
 @mixin section {
@@ -24,6 +36,12 @@
     margin: 1rem 0;
     box-shadow: $box-shaddows;
     background-color: white;
+    @include desktop{
+        width: 30%;
+    }
+    @include tablet{
+        width: 45%;
+    }
 }
 
 @mixin button {
