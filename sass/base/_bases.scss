@@ -1,3 +1,6 @@
 section {
     @include section;
 }
+h1{
+    @extend .typography_logo;
+}

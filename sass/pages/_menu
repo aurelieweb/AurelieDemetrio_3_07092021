@@ -1,3 +1,0 @@
-.menu__heading--img {
-    @include img
-}

@@ -1,0 +1,26 @@
+.menu{
+    background-color: $lightgrey;
+    &__heading{
+
+        .menu__img {
+            @include image;
+            border-radius: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .test{
+            display: flex;
+            justify-content: space-between;
+            border-radius: 40px 40px 0 0;
+            border-top: solid 3px $lightgrey;
+            position: relative;
+            background-color: $lightgrey;
+            top: -40px;
+            z-index: 3;
+            i{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,3 +1,10 @@
+.fonctionnement-container{
+   @include tablet{
+   display: flex;
+   justify-content: space-between;   
+   }
+}
+
 .restaurant{
    @include background-section; 
    &-container{

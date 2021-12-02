@@ -69,4 +69,21 @@
 
 .menu__card{
     @include cards (auto);
+    padding: 0 1rem;
+    justify-content: space-between;
+    &--bloc{
+
+    }
+    &--price{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
