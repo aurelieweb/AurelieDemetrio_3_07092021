@@ -1,22 +1,29 @@
-/*$border-radius: 25px;*/
 section {
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
 }
 
-.typography_text--thin, .container {
+h2 {
+  margin: 0 1rem;
+}
+
+h3 {
+  margin: 0 1rem;
+}
+
+.typography_text--thin, .fonctionnement-choix a span, .container {
   font-family: "Roboto", Times New Roman, serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 300;
 }
 
-.typography_text--bold, .fonctionnement-choix, .restaurant-art div div h2 {
+.typography_text--bold, .fonctionnement-choix, h1, h3 {
   font-family: "Roboto", Times New Roman, serif;
   font-size: 1.3rem;
   font-weight: 800;
 }
 
-.typography_logo, footer h3, h1 {
+.typography_logo, h2 {
   font-family: "Shrikhand", Times New Roman, serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -33,15 +40,12 @@ section {
 }
 
 footer {
-  background-color: #353535;
+  background-color: #424546;
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
   color: white;
   padding: 1rem;
-  margin: 1rem 0;
-}
-footer h3 {
+  margin: 1rem 0 0 0;
   margin: 0;
 }
 footer p {
@@ -68,6 +72,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
+  align-items: center;
 }
 header .logo {
   width: 10rem;
@@ -75,8 +80,7 @@ header .logo {
 header i {
   display: flex;
   position: relative;
-  right: 100px;
-  /*align-items: center;*/
+  right: 80px;
 }
 
 @media screen and (min-width: 480px) {
@@ -87,7 +91,7 @@ header i {
 }
 
 .restaurant {
-  background-color: #e5e8e9;
+  background-color: #eff3f5;
 }
 @media screen and (min-width: 480px) {
   .restaurant-container {
@@ -100,12 +104,12 @@ header i {
 
 .recherche {
   padding: 0;
-  background-color: #e5e8e9;
+  background-color: #eff3f5;
 }
 .recherche-loc {
   display: flex;
   justify-content: center;
-  background-color: #b8bdbe;
+  background-color: #e1e6e7;
   height: 3rem;
 }
 .recherche-loc i {
@@ -115,7 +119,7 @@ header i {
 }
 .recherche-loc input {
   border: none;
-  background-color: #b8bdbe;
+  background-color: #e1e6e7;
 }
 .recherche-resultat {
   display: flex;
@@ -132,30 +136,36 @@ header i {
 }
 
 .menu {
-  background-color: #e5e8e9;
+  background-color: #eff3f5;
+  padding: 0;
 }
-.menu__heading .menu__img {
+.menu__heading--img {
   width: 100%;
   height: 70%;
-  border-radius: 25px 25px 0 0;
+  border-radius: 15px 15px 0 0;
   object-fit: cover;
   border-radius: 0;
   position: relative;
   z-index: 2;
 }
-.menu__heading .test {
+.menu__heading--title {
   display: flex;
   justify-content: space-between;
   border-radius: 40px 40px 0 0;
-  border-top: solid 3px #e5e8e9;
+  border-top: solid 3px #eff3f5;
   position: relative;
-  background-color: #e5e8e9;
+  background-color: #eff3f5;
   top: -40px;
   z-index: 3;
 }
-.menu__heading .test i {
+.menu__heading--title i {
   display: flex;
   align-items: center;
+}
+.menu__border {
+  display: flex;
+  border-top: 4px solid #99E2D0;
+  width: 3rem;
 }
 
 .restaurant-art {
@@ -163,7 +173,7 @@ header i {
   flex-direction: row;
   width: auto;
   height: 15rem;
-  border-radius: 25px;
+  border-radius: 15px;
   margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
@@ -178,10 +188,13 @@ header i {
     width: 30%;
   }
 }
+.restaurant-art a {
+  width: 100%;
+}
 .restaurant-art img {
   width: 100%;
   height: 70%;
-  border-radius: 25px 25px 0 0;
+  border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 .restaurant-art div {
@@ -196,9 +209,6 @@ header i {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-}
-.restaurant-art div div h2 {
-  margin: 0 1rem;
 }
 .restaurant-art div div p {
   margin: 0 1rem;
@@ -215,13 +225,13 @@ header i {
   flex-direction: row;
   width: auto;
   height: auto;
-  border-radius: 25px;
+  border-radius: 15px;
   margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
   margin-left: 1rem;
   justify-content: space-between;
-  background-color: #e5e8e9;
+  background-color: #eff3f5;
   font-size: 1rem;
 }
 @media screen and (min-width: 480px) {
@@ -239,7 +249,7 @@ header i {
   display: flex;
   align-items: center;
   width: auto;
-  height: 5rem;
+  height: 4rem;
 }
 .fonctionnement-choix a span {
   border-radius: 50%;
@@ -247,17 +257,23 @@ header i {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   position: relative;
-  left: -20px;
+  left: -12px;
   color: #fff;
+  /*@include tablet{
+      height: 1rem;
+      width: 1rem;
+      left: -8px;
+      font-size: 10px;
+  }*/
 }
 .fonctionnement-choix a p {
   margin-left: 20px;
 }
 .fonctionnement-choix a i {
-  color: #717374;
+  color: #424546;
 }
 
 .menu__card {
@@ -265,7 +281,7 @@ header i {
   flex-direction: row;
   width: auto;
   height: auto;
-  border-radius: 25px;
+  border-radius: 15px;
   margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
@@ -306,6 +322,7 @@ header i {
   color: #fff;
   border-radius: 25px;
   padding: 1rem;
+  border: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

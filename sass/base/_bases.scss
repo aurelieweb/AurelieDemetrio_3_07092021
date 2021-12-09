@@ -2,5 +2,17 @@ section {
     @include section;
 }
 h1{
-    @extend .typography_logo;
+    @extend .typography_text--bold;
 }
+
+h2{
+    margin: 0 1rem;
+    @extend .typography_logo;    
+}
+
+h3{
+    margin: 0 1rem;
+    @extend .typography_text--bold;    
+}
+
+

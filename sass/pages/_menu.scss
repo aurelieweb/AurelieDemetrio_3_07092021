@@ -1,14 +1,14 @@
 .menu{
     background-color: $lightgrey;
+    padding: 0;
     &__heading{
-
-        .menu__img {
+        &--img{
             @include image;
             border-radius: 0;
             position: relative;
             z-index: 2;
         }
-        .test{
+        &--title{
             display: flex;
             justify-content: space-between;
             border-radius: 40px 40px 0 0;
@@ -22,5 +22,10 @@
                 align-items: center;
             }
         }
+    }
+    &__border{
+        display: flex;
+        border-top: 4px solid $green;
+        width: 3rem;
     }
 }
