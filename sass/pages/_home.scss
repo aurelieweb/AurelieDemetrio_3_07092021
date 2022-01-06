@@ -25,12 +25,14 @@
       justify-content: center;
       background-color: $grey;
       height: 3rem;
+      &__container{
+         display: flex;
+         width: 10rem;
+      }
       i {
          display: flex;
          align-items: center;
-         width: 35%;
          justify-content: right;
-         /* padding-right: 15px; */
          font-size: 18px;
       } 
       input {

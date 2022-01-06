@@ -57,7 +57,7 @@ h4 {
 }
 
 footer {
-  background-color: #424546;
+  background-color: #353535;
   display: flex;
   flex-direction: column;
   color: white;
@@ -109,7 +109,7 @@ header i {
 }
 
 .restaurant {
-  background-color: #eff3f5;
+  background-color: #f6f6f6;
 }
 @media screen and (min-width: 480px) {
   .restaurant-container {
@@ -122,25 +122,27 @@ header i {
 
 .recherche {
   padding: 0;
-  background-color: #eff3f5;
+  background-color: #f6f6f6;
 }
 .recherche-loc {
   display: flex;
   justify-content: center;
-  background-color: #e1e6e7;
+  background-color: #eaeaea;
   height: 3rem;
+}
+.recherche-loc__container {
+  display: flex;
+  width: 10rem;
 }
 .recherche-loc i {
   display: flex;
   align-items: center;
-  width: 35%;
   justify-content: right;
-  /* padding-right: 15px; */
   font-size: 18px;
 }
 .recherche-loc input {
   border: none;
-  background-color: #e1e6e7;
+  background-color: #eaeaea;
   width: 65%;
   margin-left: 15px;
 }
@@ -162,7 +164,7 @@ header i {
 }
 
 .menu {
-  background-color: #eff3f5;
+  background-color: #f6f6f6;
   padding: 0 0 4rem 0;
 }
 .menu__container {
@@ -185,9 +187,9 @@ header i {
   justify-content: space-between;
   padding: 1rem;
   border-radius: 40px 40px 0 0;
-  border-top: solid 3px #eff3f5;
+  border-top: solid 3px #f6f6f6;
   position: relative;
-  background-color: #eff3f5;
+  background-color: #f6f6f6;
   top: -40px;
   z-index: 3;
 }
@@ -270,7 +272,7 @@ header i {
   background-color: white;
   margin-left: 1rem;
   justify-content: space-between;
-  background-color: #eff3f5;
+  background-color: #f6f6f6;
   font-size: 1rem;
 }
 @media screen and (min-width: 480px) {
@@ -313,7 +315,7 @@ header i {
   margin-left: 20px;
 }
 .fonctionnement-choix a i {
-  color: #424546;
+  color: #7e7e7e;
 }
 
 .menu__card {
