@@ -1,18 +1,30 @@
+body{
+    margin: 0;
+}
+
 section {
     @include section;
 }
 h1{
     @extend .typography_text--bold;
+    font-size: 2rem;
 }
 
 h2{
-    margin: 0 1rem;
+    margin: 0;
     @extend .typography_logo;    
 }
 
 h3{
-    margin: 0 1rem;
-    @extend .typography_text--bold;    
+    margin: 0;
+    @extend .typography_text--bold;
+    font-size: 1rem;    
+}
+
+h4{
+    margin: 0;
+    @extend .typography_text--bold;
+    font-size: 1rem; 
 }
 
 

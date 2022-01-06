@@ -18,9 +18,10 @@
             flex-direction: column;
             justify-content: space-around;
             height: 100%;
-            p{
+            margin: 0 1rem;
+            /*p{
                 margin: 0 1rem;
-            }
+            }*/
         }
     
     }
@@ -64,6 +65,7 @@
                     font-size: 10px;
                 }*/
             }
+            /*Voir si améliorer margin*/
             p{
                 margin-left: 20px;
             }
@@ -76,10 +78,10 @@
 
 .menu__card{
     @include cards (auto);
-    padding: 0 1rem;
+    padding: 1rem;
     justify-content: space-between;
     &--bloc{
-
+        width: 100%;
     }
     &--price{
         display: flex;
@@ -87,10 +89,17 @@
         width: auto;
         justify-content: space-between;
         align-items: center;
+        p{ 
+            margin: 5px 0 0 0;
+        }
+        p:last-child{
+            @extend .typography_text--bold;
+        }
     }
     i{
-        display: flex;
+        display: none;
+        /*display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;*/
     }
 }

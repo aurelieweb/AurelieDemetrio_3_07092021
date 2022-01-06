@@ -1,26 +1,41 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
 section {
   padding: 1rem;
   margin: 1rem 0 0 0;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h2 {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 h3 {
-  margin: 0 1rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
 }
 
 .typography_text--thin, .fonctionnement-choix a span, .container {
-  font-family: "Roboto", Times New Roman, serif;
+  font-family: "Roboto", Arial, Sans-serif;
   font-size: 0.8rem;
   font-weight: 300;
 }
 
-.typography_text--bold, .fonctionnement-choix, h1, h3 {
-  font-family: "Roboto", Times New Roman, serif;
-  font-size: 1.3rem;
-  font-weight: 800;
+.typography_text--bold, .menu__card--price p:last-child, .fonctionnement-choix, .recherche-resultat p:first-child, h1, h3, h4 {
+  font-family: "Roboto", Arial, Sans-serif;
+  /*font-size: 1.3rem;*/
+  font-weight: 900;
 }
 
 .typography_logo, h2 {
@@ -30,12 +45,14 @@ h3 {
 }
 
 .container {
-  max-width: auto;
-  width: 375px;
+  max-width: 375px;
+  width: 100%;
+  margin: auto;
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: auto;
+    max-width: 768px;
+    /*width: 100%;*/
   }
 }
 
@@ -76,11 +93,12 @@ header {
 }
 header .logo {
   width: 10rem;
+  margin-top: 1.5rem;
 }
 header i {
   display: flex;
   position: relative;
-  right: 80px;
+  right: 50px;
 }
 
 @media screen and (min-width: 480px) {
@@ -113,13 +131,18 @@ header i {
   height: 3rem;
 }
 .recherche-loc i {
-  padding-right: 20px;
   display: flex;
   align-items: center;
+  width: 35%;
+  justify-content: right;
+  /* padding-right: 15px; */
+  font-size: 18px;
 }
 .recherche-loc input {
   border: none;
   background-color: #e1e6e7;
+  width: 65%;
+  margin-left: 15px;
 }
 .recherche-resultat {
   display: flex;
@@ -134,10 +157,19 @@ header i {
 .recherche-resultat p {
   text-align: center;
 }
+.recherche-resultat p:first-child {
+  font-size: 1.5rem;
+}
 
 .menu {
   background-color: #eff3f5;
-  padding: 0;
+  padding: 0 0 4rem 0;
+}
+.menu__container {
+  padding: 1rem;
+}
+.menu__container--bloc {
+  margin-bottom: 2rem;
 }
 .menu__heading--img {
   width: 100%;
@@ -151,6 +183,7 @@ header i {
 .menu__heading--title {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
   border-radius: 40px 40px 0 0;
   border-top: solid 3px #eff3f5;
   position: relative;
@@ -164,8 +197,13 @@ header i {
 }
 .menu__border {
   display: flex;
+  margin-top: 5px;
   border-top: 4px solid #99E2D0;
   width: 3rem;
+}
+.menu__button {
+  display: flex;
+  justify-content: center;
 }
 
 .restaurant-art {
@@ -209,9 +247,10 @@ header i {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-}
-.restaurant-art div div p {
   margin: 0 1rem;
+  /*p{
+      margin: 0 1rem;
+  }*/
 }
 .restaurant-art i {
   display: flex;
@@ -250,6 +289,7 @@ header i {
   align-items: center;
   width: auto;
   height: 4rem;
+  /*Voir si améliorer margin*/
 }
 .fonctionnement-choix a span {
   border-radius: 50%;
@@ -285,7 +325,7 @@ header i {
   margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
-  padding: 0 1rem;
+  padding: 1rem;
   justify-content: space-between;
 }
 @media screen and (min-width: 480px) {
@@ -298,6 +338,9 @@ header i {
     width: 30%;
   }
 }
+.menu__card--bloc {
+  width: 100%;
+}
 .menu__card--price {
   display: flex;
   flex-direction: row;
@@ -305,10 +348,14 @@ header i {
   justify-content: space-between;
   align-items: center;
 }
+.menu__card--price p {
+  margin: 5px 0 0 0;
+}
 .menu__card i {
-  display: flex;
+  display: none;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
 }
 
 .button {

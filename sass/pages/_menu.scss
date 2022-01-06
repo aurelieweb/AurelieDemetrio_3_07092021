@@ -1,6 +1,12 @@
 .menu{
     background-color: $lightgrey;
-    padding: 0;
+    padding: 0 0 4rem 0;
+    &__container{
+        padding: 1rem;
+        &--bloc{
+            margin-bottom: 2rem;
+        }
+    }
     &__heading{
         &--img{
             @include image;
@@ -11,6 +17,7 @@
         &--title{
             display: flex;
             justify-content: space-between;
+            padding: 1rem;
             border-radius: 40px 40px 0 0;
             border-top: solid 3px $lightgrey;
             position: relative;
@@ -25,7 +32,12 @@
     }
     &__border{
         display: flex;
+        margin-top: 5px;
         border-top: 4px solid $green;
         width: 3rem;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
     }
 }
