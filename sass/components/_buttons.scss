@@ -1,3 +1,27 @@
 .button {
     @include button;
+    /*transition: background-color .5s;*/
+    position: relative;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        /*background: linear-gradient(to bottom right, darken($pink, 20), darken($purple, 20));*/
+        background-color: aqua;
+        opacity: 0;
+        z-index: -1;
+        transition : opacity 250ms;
+        box-shadow: $box-shadows-hover;
+    }
 }
+
+
+
