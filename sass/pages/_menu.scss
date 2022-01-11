@@ -6,6 +6,12 @@
         &--bloc{
             margin-bottom: 2rem;
         }
+        &--card{
+            @include tablet{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
     &__heading{
         &--img{

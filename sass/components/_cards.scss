@@ -80,6 +80,9 @@
     @include cards (auto);
     padding: 1rem;
     justify-content: space-between;
+    @include tablet{
+        margin: 1rem;
+    }
     &--bloc{
         width: 100%;
     }
