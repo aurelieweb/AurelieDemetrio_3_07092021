@@ -1,6 +1,5 @@
 .button {
     @include button;
-    /*transition: background-color .5s;*/
     position: relative;
     z-index: 1;
     &:hover {
@@ -9,18 +8,21 @@
         }
     }
     &::after{
+        content: "";
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
-        /*background: linear-gradient(to bottom right, darken($pink, 20), darken($purple, 20));*/
-        background-color: aqua;
+        background: linear-gradient(to bottom right, lighten($pink, 5), lighten($purple, 5));
         opacity: 0;
         z-index: -1;
+        border-radius: 25px;
+    /*Pourquoi je suis obligée de rajouter un border-radius*/
         transition : opacity 250ms;
         box-shadow: $box-shadows-hover;
     }
+    
 }
 
 
