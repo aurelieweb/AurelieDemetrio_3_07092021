@@ -7,13 +7,13 @@
         @include image;
           
     }
-    div{
+    .restaurant-bandeau{
         display: flex;
         flex-direction: row;      
         justify-content: space-between;
         width: auto;
         height: auto;
-        div{
+        &__text{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -23,14 +23,29 @@
                 margin: 0 1rem;
             }*/
         }
+        &__icon{
+            display: flex;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 1rem;
+            }
+            .fas{
+              display: none;  
+            }
+        }
+            &__icon:active{
+                .fas{
+                    display: flex;
+                }
+                .far{
+                    display: none;
+                }
+                color: blue;
+            }
+    }
     
-    }
-    i{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 1rem;
-    }
 }
 
 .fonctionnement-choix{

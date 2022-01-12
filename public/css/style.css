@@ -181,7 +181,7 @@ header i {
 }
 .menu__heading--img {
   width: 100%;
-  height: 70vh;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
   border-radius: 0;
@@ -239,18 +239,18 @@ header i {
 }
 .restaurant-art img {
   width: 100%;
-  height: 70vh;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.restaurant-art div {
+.restaurant-art .restaurant-bandeau {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: auto;
   height: auto;
 }
-.restaurant-art div div {
+.restaurant-art .restaurant-bandeau__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -260,11 +260,26 @@ header i {
       margin: 0 1rem;
   }*/
 }
-.restaurant-art i {
+.restaurant-art .restaurant-bandeau__icon {
+  display: flex;
+}
+.restaurant-art .restaurant-bandeau__icon i {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 1rem;
+}
+.restaurant-art .restaurant-bandeau__icon .fas {
+  display: none;
+}
+.restaurant-art .restaurant-bandeau__icon:active {
+  color: blue;
+}
+.restaurant-art .restaurant-bandeau__icon:active .fas {
+  display: flex;
+}
+.restaurant-art .restaurant-bandeau__icon:active .far {
+  display: none;
 }
 
 .fonctionnement-choix {
