@@ -19,6 +19,10 @@
             border-radius: 0;
             position: relative;
             z-index: 2;
+            @include tablet{
+                height: 40vh;
+                object-position: right 70%;
+            }
         }
         &--title{
             display: flex;

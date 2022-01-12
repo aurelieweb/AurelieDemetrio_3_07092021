@@ -181,12 +181,18 @@ header i {
 }
 .menu__heading--img {
   width: 100%;
-  height: 70vh;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
   border-radius: 0;
   position: relative;
   z-index: 2;
+}
+@media screen and (min-width: 480px) {
+  .menu__heading--img {
+    height: 40vh;
+    object-position: right 70%;
+  }
 }
 .menu__heading--title {
   display: flex;
@@ -239,7 +245,7 @@ header i {
 }
 .restaurant-art img {
   width: 100%;
-  height: 70vh;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
