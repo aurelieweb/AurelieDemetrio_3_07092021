@@ -28,14 +28,17 @@
                 align-items: center;
                 margin: 0 1rem;
                 font-size: 1.5rem;
+                position: relative;
+                z-index: 1;
             }
             .fas{
               display: none;
             } 
             &:active{
-                content: "";
+                /*content: "";
                 /*position: absolute;*/
                 /*z-index: -1;*/
+                /*opacity: 0;*/
                 .fas{
                     display: flex;
                     /*top: 0;*/
@@ -43,6 +46,14 @@
                     -webkit-background-clip:text;
                     -webkit-text-fill-color: transparent;
                     transition: all .5s;
+                    /*position: absolute;
+                    opacity: 0;
+                    z-index: -1;
+                    transition: opacity 0.5s;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;*/
                 }
                 .far{
                     display: none;
