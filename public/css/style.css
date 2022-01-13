@@ -249,17 +249,6 @@ header i {
   justify-content: space-between;
   width: auto;
   height: auto;
-  /*&__icon::before{
-      content: "";
-      position: absolute;
-      top: 1rem;
-      left: 0;
-      background:-webkit-linear-gradient(bottom right, $pink, $purple);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color: transparent;
-      transition: all .5s;
-      z-index: -1;
-  }*/
 }
 .restaurant-art .restaurant-bandeau__text {
   display: flex;
@@ -267,9 +256,6 @@ header i {
   justify-content: space-around;
   height: 100%;
   margin: 0 1rem;
-  /*p{
-      margin: 0 1rem;
-  }*/
 }
 .restaurant-art .restaurant-bandeau__icon {
   display: flex;
@@ -279,19 +265,23 @@ header i {
   justify-content: center;
   align-items: center;
   margin: 0 1rem;
+  font-size: 1.5rem;
 }
 .restaurant-art .restaurant-bandeau__icon .fas {
   display: none;
-  /*overflow: hidden;
-  position: relative; 
-  z-index: 0;*/
+}
+.restaurant-art .restaurant-bandeau__icon:active {
+  content: "";
+  /*position: absolute;*/
+  /*z-index: -1;*/
 }
 .restaurant-art .restaurant-bandeau__icon:active .fas {
   display: flex;
-  top: 0;
+  /*top: 0;*/
   background: -webkit-linear-gradient(bottom right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
 }
 .restaurant-art .restaurant-bandeau__icon:active .far {
   display: none;
