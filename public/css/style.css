@@ -440,9 +440,8 @@ header i {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #353535;
+  background: #042104;
   animation: animateBg 10s linear infinite;
-  animation-duration: 3s;
 }
 
 @keyframes animateBg {
