@@ -442,6 +442,7 @@ header i {
   min-height: 100vh;
   background: #353535;
   animation: animateBg 10s linear infinite;
+  animation-duration: 3s;
 }
 
 @keyframes animateBg {
@@ -474,13 +475,13 @@ header i {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #9356DC;
-  box-shadow: 0 0 10px #9356DC;
-  box-shadow: 0 0 20px #9356DC;
-  box-shadow: 0 0 40px #9356DC;
-  box-shadow: 0 0 60px #9356DC;
-  box-shadow: 0 0 80px #9356DC;
-  box-shadow: 0 0 100px #9356DC;
+  background: #FF79DA;
+  box-shadow: 0 0 10px #FF79DA;
+  box-shadow: 0 0 20px #FF79DA;
+  box-shadow: 0 0 40px #FF79DA;
+  box-shadow: 0 0 60px #FF79DA;
+  box-shadow: 0 0 80px #FF79DA;
+  box-shadow: 0 0 100px #FF79DA;
   animation: animate 2s linear infinite;
   animation-delay: calc(0.1s * var(--i));
 }

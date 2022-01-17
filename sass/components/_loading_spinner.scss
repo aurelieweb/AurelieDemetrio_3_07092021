@@ -5,6 +5,7 @@
     min-height: 100vh;
     background: $darkgrey; 
     animation: animateBg 10s linear infinite;
+    animation-duration: 3s;
 }
     @keyframes animateBg {
         0%
@@ -37,13 +38,13 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: $purple;
-    box-shadow: 0 0 10px $purple;
-    box-shadow: 0 0 20px $purple;
-    box-shadow: 0 0 40px $purple;
-    box-shadow: 0 0 60px $purple;
-    box-shadow: 0 0 80px $purple;
-    box-shadow: 0 0 100px $purple;
+    background: $pink;
+    box-shadow: 0 0 10px $pink;
+    box-shadow: 0 0 20px $pink;
+    box-shadow: 0 0 40px $pink;
+    box-shadow: 0 0 60px $pink;
+    box-shadow: 0 0 80px $pink;
+    box-shadow: 0 0 100px $pink;
     animation: animate 2s linear infinite; 
     animation-delay: calc(0.1s * var(--i)); 
 }
