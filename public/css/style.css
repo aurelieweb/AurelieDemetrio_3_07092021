@@ -249,14 +249,25 @@ header i {
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.restaurant-art div {
+.restaurant-art .restaurant-bandeau {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: auto;
   height: auto;
+  /*&__icon::before{
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      background:-webkit-linear-gradient(bottom right, $pink, $purple);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color: transparent;
+      transition: all .5s;
+      z-index: -1;
+  }*/
 }
-.restaurant-art div div {
+.restaurant-art .restaurant-bandeau__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -266,11 +277,30 @@ header i {
       margin: 0 1rem;
   }*/
 }
-.restaurant-art i {
+.restaurant-art .restaurant-bandeau__icon {
+  display: flex;
+}
+.restaurant-art .restaurant-bandeau__icon i {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 1rem;
+}
+.restaurant-art .restaurant-bandeau__icon .fas {
+  display: none;
+  /*overflow: hidden;
+  position: relative; 
+  z-index: 0;*/
+}
+.restaurant-art .restaurant-bandeau__icon:active .fas {
+  display: flex;
+  top: 0;
+  background: -webkit-linear-gradient(bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant-art .restaurant-bandeau__icon:active .far {
+  display: none;
 }
 
 .fonctionnement-choix {
@@ -409,6 +439,65 @@ header i {
   /*Pourquoi je suis obligée de rajouter un border-radius*/
   transition: opacity 250ms;
   box-shadow: 0px 5px 10px #535657;
+}
+
+.loading_spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #042104;
+  animation: animateBg 10s linear infinite;
+}
+
+@keyframes animateBg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+.loader span {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.loader span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #FF79DA;
+  box-shadow: 0 0 10px #FF79DA;
+  box-shadow: 0 0 20px #FF79DA;
+  box-shadow: 0 0 40px #FF79DA;
+  box-shadow: 0 0 60px #FF79DA;
+  box-shadow: 0 0 80px #FF79DA;
+  box-shadow: 0 0 100px #FF79DA;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  80%, 100% {
+    transform: scale(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
