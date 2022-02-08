@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*$i: ;*/
+/*$total4: 4;*/
+/*@mixin cascade {
+    .menu__container--card{
+        animation: someAnimation 3s linear 0s 1 normal none;}
+    @for $i from 1 through $total{
+        .menu__container--card-# {} {
+            animation-delay: 1s*$i;
+        }
+    }
+} */
 body {
   margin: 0;
 }
@@ -177,6 +188,32 @@ header i {
   .menu__container--card {
     display: flex;
     justify-content: space-between;
+  }
+}
+.menu__container--card .menu__card {
+  transition: 0.5s;
+  animation: cascade 5s;
+}
+.menu__container--card .menu__card:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0s;
+}
+.menu__container--card .menu__card:nth-child(2) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 0.5s;
+}
+.menu__container--card .menu__card:nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1s;
+}
+@keyframes cascade {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .menu__heading--img {
