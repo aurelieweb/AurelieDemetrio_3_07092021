@@ -2,18 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background:#042104; 
-    animation: animateBg 10s linear infinite;
+    height: 100vh;
+    background: rgb(10, 5, 34); 
+    animation: animateBg 10s linear;
+    animation-fill-mode: forwards;
 }
     @keyframes animateBg {
         0%
         {
             filter: hue-rotate(0deg);
         }
-        100%
+        99.9%
         {
             filter: hue-rotate(360deg);
+        }
+        100%
+        {
+            display: none;
         }
     }
     .loader{
@@ -45,6 +50,7 @@
     box-shadow: 0 0 80px $pink;
     box-shadow: 0 0 100px $pink;
     animation: animate 2s linear infinite; 
+    animation-fill-mode: forwards;
     animation-delay: calc(0.1s * var(--i)); 
 }
 @keyframes animate {
