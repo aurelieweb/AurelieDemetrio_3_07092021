@@ -112,13 +112,14 @@
 
 .menu__card{
     @include cards (auto);
-    padding: 1rem;
+    /*padding: 1rem;*/
     justify-content: space-between;
     @include tablet{
         margin: 1rem;
     }
     &--bloc{
         width: 100%;
+        margin: 1rem;
     }
     &--price{
         display: flex;
@@ -133,10 +134,26 @@
             @extend .typography_text--bold;
         }
     }
-    i{
+    &--check{
         display: none;
-        /*display: flex;
-        justify-content: center;
-        align-items: center;*/
+        &:hover{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 1em; */
+            height: auto;
+            background: $green;
+            width: 7rem;
+            border-radius: 0 15px 15px 0;
+            i{
+                /*display: none;*/
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.7rem;
+                color: #fff;
+            }
+        }
     }
+    
 }

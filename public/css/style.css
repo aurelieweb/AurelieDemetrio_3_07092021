@@ -193,6 +193,8 @@ header i {
 .menu__container--card .menu__card {
   transition: 0.5s;
   animation: cascade 5s;
+  visibility: visible;
+  /*opacity: 1;*/
 }
 .menu__container--card .menu__card:nth-child(1) {
   -webkit-animation-delay: 0.5s;
@@ -209,8 +211,13 @@ header i {
 @keyframes cascade {
   0% {
     transform: translateY(-30px);
-    opacity: 0;
+    opacity: 1;
+    visibility: hidden;
   }
+  /*99.9%{
+      transform: translateY(0);
+      opacity: 1;
+  }*/
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -406,7 +413,7 @@ header i {
   margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
-  padding: 1rem;
+  /*padding: 1rem;*/
   justify-content: space-between;
 }
 @media screen and (min-width: 480px) {
@@ -426,6 +433,7 @@ header i {
 }
 .menu__card--bloc {
   width: 100%;
+  margin: 1rem;
 }
 .menu__card--price {
   display: flex;
@@ -437,11 +445,26 @@ header i {
 .menu__card--price p {
   margin: 5px 0 0 0;
 }
-.menu__card i {
+.menu__card--check {
   display: none;
-  /*display: flex;
+}
+.menu__card--check:hover {
+  display: flex;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
+  /* padding: 1em; */
+  height: auto;
+  background: #99E2D0;
+  width: 7rem;
+  border-radius: 0 15px 15px 0;
+}
+.menu__card--check:hover i {
+  /*display: none;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  color: #fff;
 }
 
 .button {
@@ -484,19 +507,24 @@ header i {
   align-items: center;
   height: 100vh;
   background: #0a0522;
-  animation: animateBg 10s linear;
+  animation: animateBg 2s linear;
   animation-fill-mode: forwards;
+  visibility: hidden;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
 }
 
 @keyframes animateBg {
   0% {
     filter: hue-rotate(0deg);
+    visibility: visible;
   }
   99.9% {
     filter: hue-rotate(360deg);
   }
   100% {
-    display: none;
+    visibility: hidden;
   }
 }
 .loader {

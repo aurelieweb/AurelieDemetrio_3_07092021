@@ -4,13 +4,18 @@
     align-items: center;
     height: 100vh;
     background: rgb(10, 5, 34); 
-    animation: animateBg 10s linear;
+    animation: animateBg 2s linear;
     animation-fill-mode: forwards;
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
 }
     @keyframes animateBg {
         0%
         {
             filter: hue-rotate(0deg);
+            visibility: visible;
         }
         99.9%
         {
@@ -18,7 +23,7 @@
         }
         100%
         {
-            display: none;
+            visibility: hidden;
         }
     }
     .loader{
