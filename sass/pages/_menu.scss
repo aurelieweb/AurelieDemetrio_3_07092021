@@ -13,28 +13,21 @@
                 justify-content: space-between;
             }
             .menu__card{
-            transition: 0.5s;
-            animation: cascade 5s;
-            visibility: visible;
-            /*opacity: 1;*/
+            /*transition: 0.5s;*/
+            animation: 0.25s ease-in cascade;
                 @for $i from 1 through $total{
                     &:nth-child(#{$i}){
-                        -webkit-animation-delay: $i * 0.5s;
-                        animation-delay: $i * 0.5s - 0.5s;
+                        -webkit-animation-delay: $i * 0.25s;
+                        animation-delay: $i * 0.25s /*- 0.25s*/;
                     }   
                 }
             }
         }
         @keyframes cascade {
             0%{
-                transform: translateY(-30px);
-                opacity: 1;
-                visibility: hidden;
+                transform: translateY(30px);
+                opacity: 0;
             }
-            /*99.9%{
-                transform: translateY(0);
-                opacity: 1;
-            }*/
             100%{
                 transform: translateY(0);
                 opacity: 1;

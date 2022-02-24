@@ -114,6 +114,7 @@
     @include cards (auto);
     /*padding: 1rem;*/
     justify-content: space-between;
+    overflow: hidden;  
     @include tablet{
         margin: 1rem;
     }
@@ -148,6 +149,8 @@
             display: flex;
             visibility: visible;
             width: 7rem;
+            animation: background 3s ease-in-out 0.1s;
+            animation-fill-mode: backwards;          
             i{
                 /*display: none;*/
                 display: flex;
@@ -155,8 +158,33 @@
                 align-items: center;
                 font-size: 1.7rem;
                 color: #fff;
+                animation: check 0.2s ease-in-out 0.8s;
+                animation-fill-mode: backwards;
             }
         }
     }
-    
+}
+
+@keyframes background {
+    0%
+    {
+        transform: translateX(50px);
+    }
+    20%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes check {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    99.99%{
+        transform: rotate(180deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
 }
