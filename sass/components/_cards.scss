@@ -76,82 +76,72 @@
     background-color: $lightgrey;
     @extend .typography_text--bold;
     font-size: 1rem;
-        a{
-            justify-content: left;
+    a {
+        justify-content: left;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 4rem;
+        span {
+            border-radius: 50%;
+            background-color: #9356DC;
             display: flex;
+            justify-content: center;
             align-items: center;
-            width: auto;
-            height: 4rem;
-            span{
-                border-radius: 50%;
-                background-color: #9356DC;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 1.5rem;
-                width: 1.5rem;
-                position: relative;
-                left: -12px;
-                color: #fff;
-                @extend .typography_text--thin;
-                /*@include tablet{
-                    height: 1rem;
-                    width: 1rem;
-                    left: -8px;
-                    font-size: 10px;
-                }*/
-            }
-            /*Voir si améliorer margin*/
-            p{
-                margin-left: 20px;
-            }
-            i{
-                color: $icongrey;
-
-            }
-        } 
+            height: 1.5rem;
+            width: 1.5rem;
+            position: relative;
+            left: -12px;
+            color: #fff;
+            @extend .typography_text--thin;
+        }
+        p {
+            margin-left: 20px;
+        }
+        i {
+            color: $icongrey;
+        }
+    } 
 }
 
-.menu__card{
+.menu__card {
     @include cards (auto);
 
     justify-content: space-between;
     overflow: hidden;  
-    @include tablet{
+    @include tablet {
         margin: 1rem;
     }
-    &--bloc{
+    &--bloc {
         width: 100%;
         margin: 1rem;
     }
-    &--price{
+    &--price {
         display: flex;
         flex-direction: row;
         width: auto;
         justify-content: space-between;
         align-items: center;
-        p{ 
+        p { 
             margin: 5px 0 0 0;
         }
-        p:last-child{
+        p:last-child {
             @extend .typography_text--bold;
         }
     }
-    &--check{
+    &--check {
         display: flex;
         visibility: hidden;
         justify-content: center;
         align-items: center;
-        /* padding: 1em; */
         height: auto;
         background: $green;
-        border-radius: 0 15px 15px 0;
-        
-        &:hover{
+        border-radius: 0 15px 15px 0;  
+        &:hover {
             display: flex;
             visibility: visible;
             width: 7rem;         
-            i{
+            i {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -165,12 +155,10 @@
 }
 
 @keyframes check {
-    0%
-    {
+    0% {
         transform: rotate(0);
     }
-    100%
-    {
+    100% {
         transform: rotate(360deg);
     }
 }

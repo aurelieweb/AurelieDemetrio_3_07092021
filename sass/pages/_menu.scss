@@ -1,33 +1,33 @@
-.menu{
+.menu {
     background-color: $lightgrey;
     padding: 0 0 4rem 0;
-    &__container{
+    &__container {
         padding: 1rem;
-        &--bloc{
+        &--bloc {
             margin-bottom: 2rem;
         }
         animation: 0.25s ease-in cascade;
         animation-fill-mode: backwards;
         visibility: visible;
-            @for $i from 1 through $total{
-                &:nth-child(#{$i}){
+            @for $i from 1 through $total {
+                &:nth-child(#{$i}) {
                     -webkit-animation-delay: $i * 0.1s;
                     animation-delay: $i * 0.1s /*- 0.25s*/;
                 }
             }
-        &--card{
+        &--card {
             overflow: hidden;
             padding: 0.5rem;
-            @include tablet{
+            @include tablet {
                 display: flex;
                 justify-content: space-between;
             }
-            .menu__card{
+            .menu__card {
             animation: 0.22s ease-in cascade;
             animation-fill-mode: backwards;
             visibility: visible;
-                @for $i from 1 through $total{
-                    &:nth-child(#{$i}){
+                @for $i from 1 through $total {
+                    &:nth-child(#{$i}) {
                         -webkit-animation-delay: $i * 0.22s;
                         animation-delay: $i * 0.22s /*- 0.25s*/;
                     }   
@@ -35,12 +35,12 @@
             }
         }
         @keyframes cascade {
-            0%{
+            0% {
                 transform: translateY(50px);
                 opacity: 0;
                 visibility: visible;
             }
-            100%{
+            100% {
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
@@ -48,18 +48,18 @@
         }
     }
 
-    &__heading{
-        &--img{
+    &__heading {
+        &--img {
             @include image;
             border-radius: 0;
             position: relative;
             z-index: 2;
-            @include tablet{
+            @include tablet {
                 height: 40vh;
                 object-position: right 70%;
             }
         }
-        &--title{
+        &--title {
             display: flex;
             justify-content: space-between;
             padding: 1rem;
@@ -69,19 +69,19 @@
             background-color: $lightgrey;
             top: -40px;
             z-index: 3;
-            i{
+            i {
                 display: flex;
                 align-items: center;
             }
         }
     }
-    &__border{
+    &__border {
         display: flex;
         margin-top: 5px;
         border-top: 4px solid $green;
         width: 3rem;
     }
-    &__button{
+    &__button {
         display: flex;
         justify-content: center;
     }

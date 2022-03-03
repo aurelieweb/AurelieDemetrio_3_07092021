@@ -1,14 +1,14 @@
-.fonctionnement-container{
-   @include tablet{
+.fonctionnement-container {
+   @include tablet {
    display: flex;
    justify-content: space-between;   
    }
 }
 
-.restaurant{
+.restaurant {
    @include background-section; 
-   &-container{
-      @include tablet{
+   &-container {
+      @include tablet {
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
@@ -17,15 +17,15 @@
    }
 }
 
-.recherche{
+.recherche {
    padding: 0;
    @include background-section;
-   &-loc{
+   &-loc {
       display: flex;
       justify-content: center;
       background-color: $grey;
       height: 3rem;
-      &__container{
+      &__container {
          display: flex;
          width: 10rem;
       }
@@ -50,7 +50,6 @@
       width: 100%;
       box-sizing: border-box; 
       padding: 1rem;
-/*probleme centrage*/
       p {
          text-align: center;
       }

@@ -1,27 +1,27 @@
-body{
+body {
     margin: 0;
 }
 
 section {
     @include section;
 }
-h1{
+h1 {
     @extend .typography_text--bold;
     font-size: 2rem;
 }
 
-h2{
+h2 {
     margin: 0;
     @extend .typography_logo;    
 }
 
-h3{
+h3 {
     margin: 0;
     @extend .typography_text--bold;
     font-size: 1rem;    
 }
 
-h4{
+h4 {
     margin: 0;
     @extend .typography_text--bold;
     font-size: 1rem; 

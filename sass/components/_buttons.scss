@@ -7,7 +7,7 @@
             opacity: 1;
         }
     }
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -18,11 +18,9 @@
         opacity: 0;
         z-index: -1;
         border-radius: 25px;
-    /*Pourquoi je suis obligée de rajouter un border-radius*/
         transition : opacity 250ms;
         box-shadow: $box-shadows-hover;
-    }
-    
+    } 
 }
 
 
