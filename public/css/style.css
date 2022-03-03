@@ -301,6 +301,8 @@ header i {
 }
 .restaurant-art a {
   width: 100%;
+  text-decoration: none;
+  color: black;
 }
 .restaurant-art img {
   width: 100%;
