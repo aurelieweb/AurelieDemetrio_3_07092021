@@ -81,6 +81,10 @@ footer p {
   display: flex;
   align-items: center;
 }
+footer a {
+  text-decoration: none;
+  color: white;
+}
 footer .footer__div {
   display: flex;
   flex-direction: row;
