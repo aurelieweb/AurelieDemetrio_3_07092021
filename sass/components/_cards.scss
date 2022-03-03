@@ -19,52 +19,53 @@
             justify-content: space-around;
             height: 100%;
             margin: 0 1rem;
-            /*p{
-                margin: 0 1rem;
-            }*/
         }
         &__icon{
             display: flex;
-            i{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            justify-content: center;
+            align-items: center;
+            far{
                 margin: 0 1rem;
+                visibility: visible;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1;
             }
             .fas{
-              display: none; 
-              /*overflow: hidden;
-              position: relative; 
-              z-index: 0;*/
-            }
-        }
-            /*&__icon::before{
-                content: "";
-                position: absolute;
-                top: 1rem;
-                left: 0;
+                visibility: hidden; 
+                overflow: hidden;
                 background:-webkit-linear-gradient(bottom right, $pink, $purple);
                 -webkit-background-clip:text;
                 -webkit-text-fill-color: transparent;
-                transition: all .5s;
-                z-index: -1;
-            }*/
-            &__icon:active/*::before*/{
-                .fas{
-                    display: flex;
-                    top: 0;
-
-                    background:-webkit-linear-gradient(bottom right, $pink, $purple);
-                    -webkit-background-clip:text;
-                    -webkit-text-fill-color: transparent;
-                }
-                .far{
-                    display: none;
-                }
-                
+                position: relative;
+                top: 0;
+                right: 1rem;
+                z-index: 0;
             }
+        }
     }
-    
+    .restaurant-bandeau:hover{
+        .far{
+            visibility: hidden;
+        }
+        .fas{
+            visibility: visible;
+            animation: heart 2s linear;
+
+        }
+    }
+}
+
+@keyframes heart {
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .fonctionnement-choix{
@@ -112,7 +113,7 @@
 
 .menu__card{
     @include cards (auto);
-    /*padding: 1rem;*/
+
     justify-content: space-between;
     overflow: hidden;  
     @include tablet{
@@ -148,11 +149,8 @@
         &:hover{
             display: flex;
             visibility: visible;
-            width: 7rem;
-            animation: background 4s ease-in-out 0.1s;
-            animation-fill-mode: backwards;          
+            width: 7rem;         
             i{
-                /*display: none;*/
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -165,31 +163,11 @@
     }
 }
 
-@keyframes background {
-    0%
-    {
-        transform: translateX(50px);
-    }
-    30%{
-        transform: translateX(0);
-    }
-    70%{
-        transform: translateX(0);
-    }
-    100%
-    {
-        transform: translateX(100px);
-    }
-}
-
 @keyframes check {
     0%
     {
         transform: rotate(0);
     }
-    /*99.99%{
-        transform: rotate(180deg);
-    }*/
     100%
     {
         transform: rotate(360deg);

@@ -6,35 +6,46 @@
         &--bloc{
             margin-bottom: 2rem;
         }
-
+        animation: 0.25s ease-in cascade;
+        animation-fill-mode: backwards;
+        visibility: visible;
+            @for $i from 1 through $total{
+                &:nth-child(#{$i}){
+                    -webkit-animation-delay: $i * 0.1s;
+                    animation-delay: $i * 0.1s /*- 0.25s*/;
+                }
+            }
         &--card{
+            overflow: hidden;
+            padding: 0.5rem;
             @include tablet{
                 display: flex;
                 justify-content: space-between;
             }
             .menu__card{
-            /*transition: 0.5s;*/
-            animation: 0.25s ease-in cascade;
+            animation: 0.22s ease-in cascade;
+            animation-fill-mode: backwards;
+            visibility: visible;
                 @for $i from 1 through $total{
                     &:nth-child(#{$i}){
-                        -webkit-animation-delay: $i * 0.25s;
-                        animation-delay: $i * 0.25s /*- 0.25s*/;
+                        -webkit-animation-delay: $i * 0.22s;
+                        animation-delay: $i * 0.22s /*- 0.25s*/;
                     }   
                 }
             }
         }
         @keyframes cascade {
             0%{
-                transform: translateY(30px);
+                transform: translateY(50px);
                 opacity: 0;
+                visibility: visible;
             }
             100%{
                 transform: translateY(0);
                 opacity: 1;
+                visibility: visible;
             }
         }
-
-
     }
 
     &__heading{

@@ -180,9 +180,28 @@ header i {
 }
 .menu__container {
   padding: 1rem;
+  animation: 0.25s ease-in cascade;
+  animation-fill-mode: backwards;
+  visibility: visible;
 }
 .menu__container--bloc {
   margin-bottom: 2rem;
+}
+.menu__container:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.menu__container:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.menu__container:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.menu__container--card {
+  overflow: hidden;
+  padding: 0.5rem;
 }
 @media screen and (min-width: 480px) {
   .menu__container--card {
@@ -191,29 +210,32 @@ header i {
   }
 }
 .menu__container--card .menu__card {
-  /*transition: 0.5s;*/
-  animation: 0.25s ease-in cascade;
+  animation: 0.22s ease-in cascade;
+  animation-fill-mode: backwards;
+  visibility: visible;
 }
 .menu__container--card .menu__card:nth-child(1) {
-  -webkit-animation-delay: 0.25s;
-  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.22s;
+  animation-delay: 0.22s;
 }
 .menu__container--card .menu__card:nth-child(2) {
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.44s;
+  animation-delay: 0.44s;
 }
 .menu__container--card .menu__card:nth-child(3) {
-  -webkit-animation-delay: 0.75s;
-  animation-delay: 0.75s;
+  -webkit-animation-delay: 0.66s;
+  animation-delay: 0.66s;
 }
 @keyframes cascade {
   0% {
-    transform: translateY(30px);
+    transform: translateY(50px);
     opacity: 0;
+    visibility: visible;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 }
 .menu__heading--img {
@@ -292,17 +314,6 @@ header i {
   justify-content: space-between;
   width: auto;
   height: auto;
-  /*&__icon::before{
-      content: "";
-      position: absolute;
-      top: 1rem;
-      left: 0;
-      background:-webkit-linear-gradient(bottom right, $pink, $purple);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color: transparent;
-      transition: all .5s;
-      z-index: -1;
-  }*/
 }
 .restaurant-art .restaurant-bandeau__text {
   display: flex;
@@ -310,36 +321,49 @@ header i {
   justify-content: space-around;
   height: 100%;
   margin: 0 1rem;
-  /*p{
-      margin: 0 1rem;
-  }*/
 }
 .restaurant-art .restaurant-bandeau__icon {
   display: flex;
-}
-.restaurant-art .restaurant-bandeau__icon i {
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+.restaurant-art .restaurant-bandeau__icon far {
   margin: 0 1rem;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 .restaurant-art .restaurant-bandeau__icon .fas {
-  display: none;
-  /*overflow: hidden;
-  position: relative; 
-  z-index: 0;*/
-}
-.restaurant-art .restaurant-bandeau__icon:active .fas {
-  display: flex;
-  top: 0;
+  visibility: hidden;
+  overflow: hidden;
   background: -webkit-linear-gradient(bottom right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 0;
+  right: 1rem;
+  z-index: 0;
 }
-.restaurant-art .restaurant-bandeau__icon:active .far {
-  display: none;
+.restaurant-art .restaurant-bandeau:hover .far {
+  visibility: hidden;
+}
+.restaurant-art .restaurant-bandeau:hover .fas {
+  visibility: visible;
+  animation: heart 2s linear;
 }
 
+@keyframes heart {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .fonctionnement-choix {
   display: flex;
   flex-direction: row;
@@ -406,7 +430,6 @@ header i {
   margin: 1rem 0;
   box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
-  /*padding: 1rem;*/
   justify-content: space-between;
   overflow: hidden;
 }
@@ -453,11 +476,8 @@ header i {
   display: flex;
   visibility: visible;
   width: 7rem;
-  animation: background 4s ease-in-out 0.1s;
-  animation-fill-mode: backwards;
 }
 .menu__card--check:hover i {
-  /*display: none;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,27 +487,10 @@ header i {
   animation-fill-mode: backwards;
 }
 
-@keyframes background {
-  0% {
-    transform: translateX(50px);
-  }
-  30% {
-    transform: translateX(0);
-  }
-  70% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100px);
-  }
-}
 @keyframes check {
   0% {
     transform: rotate(0);
   }
-  /*99.99%{
-      transform: rotate(180deg);
-  }*/
   100% {
     transform: rotate(360deg);
   }
@@ -530,7 +533,7 @@ header i {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background: #0a0522;
   animation: animateBg 2s linear;
   animation-fill-mode: forwards;
