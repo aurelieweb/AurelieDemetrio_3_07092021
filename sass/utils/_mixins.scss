@@ -52,9 +52,11 @@
     align-items: center;
     background: $linear-gradient;
     height: 3rem;
-    width: 12rem;
+    width: auto;
     color: #fff;
     border-radius: 25px;
     padding: 1rem;
     border: 0;
+    font-weight: 500;
+    font-size: 16px;
 }

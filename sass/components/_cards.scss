@@ -82,16 +82,17 @@
         align-items: center;
         width: auto;
         height: 4rem;
+        position: relative;
         span {
             border-radius: 50%;
             background-color: #9356DC;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 1.5rem;
-            width: 1.5rem;
-            position: relative;
-            left: -12px;
+            height: 1.2rem;
+            width: 1.2rem;
+            position: absolute;
+            left: -10px;
             color: #fff;
             @extend .typography_text--thin;
         }
@@ -100,6 +101,8 @@
         }
         i {
             color: $icongrey;
+            margin-left: 2em;
+            font-size: 16px;
         }
     } 
 }
