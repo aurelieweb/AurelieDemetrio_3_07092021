@@ -73,36 +73,51 @@
     @include cards(auto);
     margin-left: 1rem;
     justify-content: space-between;  
-    background-color: $lightgrey;
     @extend .typography_text--bold;
     font-size: 1rem;
     a {
         justify-content: left;
         display: flex;
         align-items: center;
-        width: auto;
+        width: 100%;
+        border-radius: 15px;
+        background-color: $lightgrey;
         height: 4rem;
         position: relative;
+        z-index: 2;
         span {
             border-radius: 50%;
             background-color: #9356DC;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 1.2rem;
-            width: 1.2rem;
+            height: 1.4rem;
+            width: 1.4rem;
             position: absolute;
             left: -10px;
             color: #fff;
-            @extend .typography_text--thin;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 3 ;
         }
         p {
             margin-left: 20px;
+            z-index: 4;
         }
         i {
             color: $icongrey;
             margin-left: 2em;
             font-size: 16px;
+            z-index: 5;
+        }
+    }
+    &:hover{
+        a{
+            opacity: 0.3;
+            background-color: $purple;
+        }
+        i{
+            color: $purple;
         }
     } 
 }
