@@ -5,8 +5,18 @@
         text-decoration: none;
         color: black;
     }
-    restaurant-label{
+    .restaurant-label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: auto;
         background-color: $green;
+        position: relative;
+        margin-right: 10px;
+        top: 10px;
+        border-radius: 5px;
+        padding: 5px 10px;
         color: #fff;
         @extend .typography_text--bold;
     }

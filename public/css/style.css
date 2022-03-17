@@ -31,7 +31,7 @@ h4 {
   font-weight: 300;
 }
 
-.typography_text--bold, .menu__card--price p:last-child, .fonctionnement-choix, .restaurant-art restaurant-label, .recherche-resultat p:first-child, h1, h3, h4 {
+.typography_text--bold, .menu__card--price p:last-child, .fonctionnement-choix, .restaurant-art .restaurant-label, .recherche-resultat p:first-child, h1, h3, h4 {
   font-family: "Roboto", Arial, Sans-serif;
   /*font-size: 1.3rem;*/
   font-weight: 900;
@@ -294,8 +294,18 @@ header i {
   text-decoration: none;
   color: black;
 }
-.restaurant-art restaurant-label {
+.restaurant-art .restaurant-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: auto;
   background-color: #99E2D0;
+  position: relative;
+  margin-right: 10px;
+  top: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
   color: #fff;
 }
 .restaurant-art img {
