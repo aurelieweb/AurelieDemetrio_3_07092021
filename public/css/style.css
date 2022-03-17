@@ -270,6 +270,8 @@ header i {
 }
 
 .restaurant-art {
+  position: relative;
+  /*z-index: 1;*/
   display: flex;
   flex-direction: row;
   width: auto;
@@ -299,11 +301,13 @@ header i {
   justify-content: center;
   align-items: center;
   width: 5rem;
-  height: auto;
+  height: 1rem;
   background-color: #99E2D0;
-  position: relative;
-  margin-right: 10px;
+  position: absolute;
+  /* margin-right: 10px;*/
   top: 10px;
+  right: 10px;
+  z-index: 0;
   border-radius: 5px;
   padding: 5px 10px;
   color: #fff;
@@ -328,48 +332,40 @@ header i {
   height: 100%;
   margin: 0 1rem;
 }
-.restaurant-art .restaurant-bandeau__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.restaurant-art .restaurant-bandeau__icon far {
-  margin: 0 1rem;
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-.restaurant-art .restaurant-bandeau__icon .fas {
-  visibility: hidden;
-  overflow: hidden;
-  background: -webkit-linear-gradient(bottom right, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  top: 0;
-  right: 1rem;
-  z-index: 0;
-}
-.restaurant-art .restaurant-bandeau:hover .far {
-  visibility: hidden;
-}
-.restaurant-art .restaurant-bandeau:hover .fas {
-  visibility: visible;
-  animation: heart 2s linear;
+
+/*&__icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            far{
+                @include heart_far
+            }
+            .fas{
+                @include heart_fas
+            }
+        }
+    }
+    .restaurant-bandeau:hover{
+        .far{
+            visibility: hidden;
+        }
+        .fas{
+            visibility: visible;
+            animation: heart 2s linear;
+        }
+    }
 }
 
 @keyframes heart {
-  0% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}*/
 .fonctionnement-choix {
   display: flex;
   flex-direction: row;
@@ -476,6 +472,7 @@ header i {
 }
 .menu__card--price p {
   margin: 5px 0 0 0;
+  text-overflow: ellipsis;
 }
 .menu__card--check {
   display: flex;
@@ -610,6 +607,49 @@ header i {
   }
   80%, 100% {
     transform: scale(0);
+  }
+}
+restaurant-bandeau__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+restaurant-bandeau__icon far {
+  margin: 0 1rem;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+restaurant-bandeau__icon .fas {
+  visibility: hidden;
+  overflow: hidden;
+  background: -webkit-linear-gradient(bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 0;
+  right: 1rem;
+  z-index: 0;
+}
+
+.restaurant-bandeau:hover .far {
+  visibility: hidden;
+}
+.restaurant-bandeau:hover .fas {
+  visibility: visible;
+  animation: heart 2s linear;
+}
+
+@keyframes heart {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

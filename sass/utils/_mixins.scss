@@ -60,3 +60,24 @@
     font-weight: 500;
     font-size: 16px;
 }
+
+@mixin heart_fas {
+    visibility: hidden; 
+    overflow: hidden;
+    background:-webkit-linear-gradient(bottom right, $pink, $purple);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 0;
+    right: 1rem;
+    z-index: 0;
+}
+
+@mixin heart_far {
+    margin: 0 1rem;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}

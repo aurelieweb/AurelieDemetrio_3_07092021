@@ -1,0 +1,31 @@
+restaurant-bandeau__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    far{
+        @include heart_far
+    }
+    .fas{
+        @include heart_fas
+    }
+}
+.restaurant-bandeau:hover{
+    .far{
+        visibility: hidden;
+    }
+    .fas{
+        visibility: visible;
+        animation: heart 2s linear;
+    }
+}
+
+@keyframes heart {
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
