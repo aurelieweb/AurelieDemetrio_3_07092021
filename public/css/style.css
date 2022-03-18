@@ -470,13 +470,12 @@ header i {
   justify-content: space-between;
   align-items: center;
 }
-.menu__card--price p {
-  margin: 5px 0 0 0;
-  text-overflow: ellipsis;
+.menu__card--price p:first-child {
+  margin: 5px 10px 0 0;
 }
 .menu__card--check {
   display: flex;
-  visibility: hidden;
+  visibility: visible;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -487,6 +486,12 @@ header i {
   display: flex;
   visibility: visible;
   width: 7rem;
+}
+.menu__card--check:hover menu__card--price p:first-child {
+  /*width: 70%;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__card--check:hover i {
   display: flex;
@@ -501,9 +506,11 @@ header i {
 @keyframes check {
   0% {
     transform: rotate(0);
+    visibility: visible;
   }
   100% {
     transform: rotate(360deg);
+    visibility: hidden;
   }
 }
 .button {
@@ -633,11 +640,10 @@ restaurant-bandeau__icon .fas {
   right: 1rem;
   z-index: 0;
 }
-
-.restaurant-bandeau:hover .far {
+restaurant-bandeau__icon .restaurant-bandeau:hover .far {
   visibility: hidden;
 }
-.restaurant-bandeau:hover .fas {
+restaurant-bandeau__icon .restaurant-bandeau:hover .fas {
   visibility: visible;
   animation: heart 2s linear;
 }

@@ -144,9 +144,8 @@
         width: auto;
         justify-content: space-between;
         align-items: center;
-        p { 
-            margin: 5px 0 0 0;
-            text-overflow: ellipsis;
+        p:first-child { 
+            margin: 5px 10px 0 0;
         }
         p:last-child {
             @extend .typography_text--bold;
@@ -154,7 +153,7 @@
     }
     &--check {
         display: flex;
-        visibility: hidden;
+        visibility: visible;
         justify-content: center;
         align-items: center;
         height: auto;
@@ -163,7 +162,13 @@
         &:hover {
             display: flex;
             visibility: visible;
-            width: 7rem;         
+            width: 7rem;  
+            menu__card--price p:first-child{
+                /*width: 70%;*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }       
             i {
                 display: flex;
                 justify-content: center;
@@ -180,8 +185,10 @@
 @keyframes check {
     0% {
         transform: rotate(0);
+        visibility: visible
     }
     100% {
         transform: rotate(360deg);
+        visibility: hidden;
     }
 }
