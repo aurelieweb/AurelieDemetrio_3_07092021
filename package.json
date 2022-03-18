@@ -20,6 +20,6 @@
   "homepage": "https://github.com/aurelieweb/AurelieDemetrio_3_07092021#readme",
   "browserslist": "last 4 versions",
   "dependencies": {
-    "sass": "^1.43.2"
+    "sass": "1.43.2"
   }
 }
