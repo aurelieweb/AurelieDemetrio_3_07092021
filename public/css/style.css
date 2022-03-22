@@ -548,7 +548,8 @@ header i {
 }
 .menu__card--bloc {
   width: 100%;
-  margin: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 .menu__card--price {
   display: flex;
