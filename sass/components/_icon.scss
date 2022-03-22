@@ -1,4 +1,4 @@
-restaurant-bandeau__icon{
+.heart-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +8,7 @@ restaurant-bandeau__icon{
     .fas{
         @include heart_fas
     }
+}
 .restaurant-bandeau:hover{
     .far{
         visibility: hidden;
@@ -17,15 +18,14 @@ restaurant-bandeau__icon{
         animation: heart 2s linear;
     }
 }
-}
 
 @keyframes heart {
-    0%{
-        visibility: visible;
-        opacity: 0;
-    }
-    100%{
-        visibility: visible;
-        opacity: 1;
-    }
-}       
+0%{
+visibility: visible;
+opacity: 0;
+}
+100%{
+visibility: visible;
+opacity: 1;
+}
+}     

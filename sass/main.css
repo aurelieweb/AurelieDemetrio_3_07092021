@@ -404,6 +404,81 @@ header i {
           justify-content: center;
 }
 
+/*.restaurant-art{
+    position: relative;
+    @include cards (15rem);
+    a{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    .restaurant-label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 1rem;
+        background-color: $green;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 0;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: #fff;
+        @extend .typography_text--bold;
+    }
+    img {
+        @include image; 
+    }
+    .restaurant-bandeau {
+        display: flex;
+        flex-direction: row;      
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            margin: 0 1rem;
+        }
+    }
+        &__icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            far{
+                @include heart_far
+            }
+            .fas{
+                @include heart_fas
+            }
+        }
+
+    .restaurant-bandeau:hover{
+        .far{
+            visibility: hidden;
+        }
+        .fas{
+            visibility: visible;
+            animation: heart 2s linear;
+        }
+    }
+}
+
+
+@keyframes heart {
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}*/
 .restaurant-art {
   position: relative;
   /*z-index: 1;*/
@@ -421,6 +496,15 @@ header i {
   -webkit-box-shadow: 0px 5px 10px #9ea6a7;
           box-shadow: 0px 5px 10px #9ea6a7;
   background-color: white;
+  /*.restaurant-bandeau:hover{
+        .far{
+            visibility: hidden;
+        }
+        .fas{
+            visibility: visible;
+            animation: heart 2s linear;
+        }
+    }*/
 }
 
 @media screen and (min-width: 480px) {
@@ -485,6 +569,17 @@ header i {
           justify-content: space-between;
   width: auto;
   height: auto;
+  /*.heart-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            far{
+                @include heart_far
+            }
+            .fas{
+                @include heart_fas
+            }
+        }*/
 }
 
 .restaurant-art .restaurant-bandeau__text {
@@ -501,30 +596,7 @@ header i {
   margin: 0 1rem;
 }
 
-/*&__icon{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            far{
-                @include heart_far
-            }
-            .fas{
-                @include heart_fas
-            }
-        }
-    }
-    .restaurant-bandeau:hover{
-        .far{
-            visibility: hidden;
-        }
-        .fas{
-            visibility: visible;
-            animation: heart 2s linear;
-        }
-    }
-}
-
-@keyframes heart {
+/*@keyframes heart {
     0%{
         visibility: visible;
         opacity: 0;
@@ -668,6 +740,35 @@ header i {
   }
 }
 
+.menu__card:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+  -webkit-animation: background 4s ease-in-out 0.1s;
+          animation: background 4s ease-in-out 0.1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.menu__card:hover i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem;
+  color: #fff;
+  -webkit-animation: check 0.5s ease-in-out 1s;
+          animation: check 0.5s ease-in-out 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
 .menu__card--bloc {
   width: 100%;
   margin: 1rem;
@@ -692,13 +793,16 @@ header i {
 
 .menu__card--price p:first-child {
   margin: 5px 10px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__card--check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  visibility: visible;
+  visibility: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -710,49 +814,52 @@ header i {
   border-radius: 0 15px 15px 0;
 }
 
-.menu__card--check:hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: visible;
-  width: 7rem;
+@-webkit-keyframes background {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  30% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
 }
 
-.menu__card--check:hover menu__card--price p:first-child {
-  /*width: 70%;*/
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.menu__card--check:hover i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.7rem;
-  color: #fff;
-  -webkit-animation: check 0.5s ease-in-out 1s;
-          animation: check 0.5s ease-in-out 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+@keyframes background {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  30% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
 }
 
 @-webkit-keyframes check {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
-    visibility: visible;
   }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    visibility: hidden;
   }
 }
 
@@ -760,12 +867,10 @@ header i {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
-    visibility: visible;
   }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    visibility: hidden;
   }
 }
 
@@ -938,7 +1043,7 @@ header i {
   }
 }
 
-restaurant-bandeau__icon {
+.heart-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,7 +1055,7 @@ restaurant-bandeau__icon {
           align-items: center;
 }
 
-restaurant-bandeau__icon far {
+.heart-icon far {
   margin: 0 1rem;
   visibility: visible;
   position: absolute;
@@ -959,7 +1064,7 @@ restaurant-bandeau__icon far {
   z-index: 1;
 }
 
-restaurant-bandeau__icon .fas {
+.heart-icon .fas {
   visibility: hidden;
   overflow: hidden;
   background: -webkit-linear-gradient(bottom right, #FF79DA, #9356DC);
@@ -971,11 +1076,11 @@ restaurant-bandeau__icon .fas {
   z-index: 0;
 }
 
-restaurant-bandeau__icon .restaurant-bandeau:hover .far {
+.restaurant-bandeau:hover .far {
   visibility: hidden;
 }
 
-restaurant-bandeau__icon .restaurant-bandeau:hover .fas {
+.restaurant-bandeau:hover .fas {
   visibility: visible;
   -webkit-animation: heart 2s linear;
           animation: heart 2s linear;

@@ -1,3 +1,79 @@
+/*.restaurant-art{
+    position: relative;
+    @include cards (15rem);
+    a{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+    .restaurant-label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 1rem;
+        background-color: $green;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 0;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: #fff;
+        @extend .typography_text--bold;
+    }
+    img {
+        @include image; 
+    }
+    .restaurant-bandeau {
+        display: flex;
+        flex-direction: row;      
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            margin: 0 1rem;
+        }
+    }
+        &__icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            far{
+                @include heart_far
+            }
+            .fas{
+                @include heart_fas
+            }
+        }
+
+    .restaurant-bandeau:hover{
+        .far{
+            visibility: hidden;
+        }
+        .fas{
+            visibility: visible;
+            animation: heart 2s linear;
+        }
+    }
+}
+
+
+@keyframes heart {
+    0%{
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}*/
+
 .restaurant-art{
     position: relative;
     /*z-index: 1;*/
@@ -40,9 +116,7 @@
             height: 100%;
             margin: 0 1rem;
         }
-    }
-}
-        /*&__icon{
+        /*.heart-icon{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,9 +126,9 @@
             .fas{
                 @include heart_fas
             }
-        }
+        }*/
     }
-    .restaurant-bandeau:hover{
+    /*.restaurant-bandeau:hover{
         .far{
             visibility: hidden;
         }
@@ -62,10 +136,10 @@
             visibility: visible;
             animation: heart 2s linear;
         }
-    }
+    }*/
 }
 
-@keyframes heart {
+/*@keyframes heart {
     0%{
         visibility: visible;
         opacity: 0;
@@ -134,6 +208,21 @@
     @include tablet {
         margin: 1rem;
     }
+    &:hover {
+        display: flex;
+        visibility: visible;   
+        animation: background 4s ease-in-out 0.1s;
+        animation-fill-mode: backwards;        
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7rem;
+            color: #fff;
+            animation: check 0.5s ease-in-out 1s;
+            animation-fill-mode: backwards;
+        }
+    }
     &--bloc {
         width: 100%;
         margin: 1rem;
@@ -146,6 +235,9 @@
         align-items: center;
         p:first-child { 
             margin: 5px 10px 0 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
         }
         p:last-child {
             @extend .typography_text--bold;
@@ -153,42 +245,37 @@
     }
     &--check {
         display: flex;
-        visibility: visible;
+        visibility: hidden;
         justify-content: center;
         align-items: center;
         height: auto;
         background: $green;
-        border-radius: 0 15px 15px 0;  
-        &:hover {
-            display: flex;
-            visibility: visible;
-            width: 7rem;  
-            menu__card--price p:first-child{
-                /*width: 70%;*/
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }       
-            i {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.7rem;
-                color: #fff;
-                animation: check 0.5s ease-in-out 1s;
-                animation-fill-mode: backwards;
-            }
-        }
+        border-radius: 0 15px 15px 0; 
+    }
+}
+
+@keyframes background {
+    0%
+    {
+        transform: translateX(50px);
+    }
+    30%{
+        transform: translateX(0);
+    }
+    70%{
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(100px);
     }
 }
 
 @keyframes check {
     0% {
         transform: rotate(0);
-        visibility: visible
     }
     100% {
         transform: rotate(360deg);
-        visibility: hidden;
     }
 }
