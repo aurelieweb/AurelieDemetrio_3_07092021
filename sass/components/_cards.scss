@@ -80,17 +80,21 @@
             font-size: 16px;
         }
     }
-    .fonctionnement-choix:hover{
-        opacity: 0;
-        a {
-            opacity: 0.3;
-            background-color: $purple;
-        }
-        i{
-            color: $purple;
-        }
-    } 
 }
+
+.fonctionnement-choix:hover{
+    background-color: #9356DC;
+    a {
+        z-index: 1;
+    }
+    i {
+        color: $purple;
+        z-index: 3;
+    }
+    .fonctionnement-number{
+        z-index: 0;
+    }
+} 
 
 .restaurant-container:nth-child(1) {
     img {

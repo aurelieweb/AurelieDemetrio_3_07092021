@@ -388,15 +388,19 @@ header i {
   margin-left: 2em;
   font-size: 16px;
 }
-.fonctionnement-choix .fonctionnement-choix:hover {
-  opacity: 0;
-}
-.fonctionnement-choix .fonctionnement-choix:hover a {
-  opacity: 0.3;
+
+.fonctionnement-choix:hover {
   background-color: #9356DC;
 }
-.fonctionnement-choix .fonctionnement-choix:hover i {
+.fonctionnement-choix:hover a {
+  z-index: 1;
+}
+.fonctionnement-choix:hover i {
   color: #9356DC;
+  z-index: 3;
+}
+.fonctionnement-choix:hover .fonctionnement-number {
+  z-index: 0;
 }
 
 .restaurant-container:nth-child(1) img {
