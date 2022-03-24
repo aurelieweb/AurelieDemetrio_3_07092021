@@ -310,7 +310,7 @@ header i {
   z-index: 0;
   border-radius: 5px;
   padding: 5px 10px;
-  color: #fff;
+  color: #008766;
 }
 .restaurant-art img {
   width: 100%;
@@ -390,7 +390,7 @@ header i {
 }
 
 .fonctionnement-choix:hover {
-  background-color: #9356DC;
+  background-color: #9256dc23;
 }
 .fonctionnement-choix:hover a {
   z-index: 1;
