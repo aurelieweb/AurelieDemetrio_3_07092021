@@ -1,3 +1,4 @@
+/*I. RESTAURANT CARDS*/
 .restaurant-art{
     position: relative;
     /*z-index: 1;*/
@@ -42,6 +43,17 @@
         }
     }
 }
+.restaurant-bandeau:hover{
+    .far{
+        visibility: hidden;
+    }
+    .fas{
+        visibility: visible;
+        animation: heart 2s linear;
+    }
+}
+
+/*II. FONCTIONNEMENT CHOIX*/
 .fonctionnement-choix{
     @include cards(auto);
     margin-left: 1rem;
@@ -120,6 +132,7 @@
     }
 }
 
+/*III. MENU CARDS*/
 .menu__card {
     @include cards (auto);
     justify-content: space-between;
@@ -127,7 +140,7 @@
     @include tablet {
         margin: 1rem;
     }
-    &:hover {
+    /*&:hover {
         display: flex;
         visibility: visible;   
         animation: background 4s ease-in-out 0.1s;
@@ -141,7 +154,7 @@
             animation: check 0.5s ease-in-out 1s;
             animation-fill-mode: backwards;
         }
-    }
+    }*/
     &--bloc {
         width: 100%;
         padding: 1rem;
@@ -153,6 +166,7 @@
         width: auto;
         justify-content: space-between;
         align-items: center;
+        height: 2rem;
         p:first-child { 
             margin: 5px 10px 0 0;
             white-space: nowrap;
@@ -170,11 +184,37 @@
         align-items: center;
         height: auto;
         background: $green;
+        color: white;
         border-radius: 0 15px 15px 0; 
+        width: 0;
     }
 }
 
-@keyframes background {
+.menu__card:hover{
+    /*display: flex;
+    /*visibility: visible;*/
+    &--bloc{
+        max-width: 70%
+    }
+    &--check{
+        display: flex;
+        visibility: visible;
+        animation: background-check 4s ease-in-out 0.1s;
+        animation-fill-mode: backwards;  
+        width: 5rem;
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7rem;
+            animation: check 0.5s ease-in-out 1s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+
+@keyframes background-check {
     0%
     {
         transform: translateX(50px);
