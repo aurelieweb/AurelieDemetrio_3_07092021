@@ -501,7 +501,7 @@ header i {
 }
 .menu__card--check {
   display: flex;
-  visibility: hidden;
+  visibility: visible;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -512,20 +512,21 @@ header i {
 }
 
 .menu__card:hover {
-  /*display: flex;
-  /*visibility: visible;*/
+  display: flex;
+  visibility: visible;
 }
-.menu__card:hover--bloc {
+.menu__card:hover .menu__card--bloc {
   max-width: 70%;
+  width: 70%;
 }
-.menu__card:hover--check {
+.menu__card:hover .menu__card--check {
   display: flex;
   visibility: visible;
   animation: background-check 4s ease-in-out 0.1s;
   animation-fill-mode: backwards;
   width: 5rem;
 }
-.menu__card:hover--check i {
+.menu__card:hover .menu__card--check i {
   display: flex;
   justify-content: center;
   align-items: center;
