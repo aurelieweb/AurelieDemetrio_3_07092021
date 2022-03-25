@@ -278,7 +278,7 @@ header i {
 }
 .menu__heading--title:hover .fas {
   visibility: visible;
-  animation: heart 2s linear;
+  animation: heart 1s cubic-bezier(0.23, 0.25, 1, 0.36);
 }
 
 /*I. RESTAURANT CARDS*/
@@ -354,7 +354,7 @@ header i {
 }
 .restaurant-bandeau:hover .fas {
   visibility: visible;
-  animation: heart 2s linear;
+  animation: heart 1s cubic-bezier(0.23, 0.25, 1, 0.36);
 }
 
 /*II. FONCTIONNEMENT CHOIX*/
