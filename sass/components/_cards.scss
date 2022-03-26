@@ -181,9 +181,9 @@
     .menu__card--check{
         display: flex;
         visibility: hidden;
-        animation: background-check 2s ease-in-out 0.1s;
+        animation: background-check 2s ease-in-out;
         animation-fill-mode: backwards;  
-        width: 80px;
+        width: 5rem;
         i {
             display: flex;
             justify-content: center;
