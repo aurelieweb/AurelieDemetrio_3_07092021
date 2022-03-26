@@ -592,7 +592,7 @@ header i {
   align-items: center;
   height: 100%;
   background: #0a0522;
-  animation: 3s animateBg 0.1s linear;
+  animation: 3s animateBg linear;
   animation-fill-mode: forwards;
   visibility: hidden;
   position: fixed;
@@ -641,7 +641,7 @@ header i {
   box-shadow: 0 0 60px #FF79DA;
   box-shadow: 0 0 80px #FF79DA;
   box-shadow: 0 0 100px #FF79DA;
-  animation: animate 2s linear infinite;
+  animation: 2s animate linear infinite;
   animation-fill-mode: forwards;
   animation-delay: calc(0.1s * var(--i));
 }
